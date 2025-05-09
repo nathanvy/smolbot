@@ -5,7 +5,7 @@ RUN addgroup -S app && adduser -S -G app app
 
 WORKDIR /src
 
-COPY go.mod go.sum Makefile ./
+COPY go.mod Makefile ./
 
 RUN go mod download
 
