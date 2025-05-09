@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  smolbot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: nathanvy/smolbot:latest
+    container_name: smolbot
+    restart: unless-stopped
+    ports:
+      - "21337:21337"
+    env_file:
+      - .env
