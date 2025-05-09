@@ -14,12 +14,12 @@ import (
 )
 
 const (
-	server   = "irc.example.net:6697"
+	server   = "irc.squishynet.net:6697"
 	channel  = "#bots"
 	nick     = "smolbot"
 	user     = "smolbot"
 	realname = "Just a smol bean"
-	password = ""
+	password = "hippo"
 )
 
 var ircConn net.Conn
@@ -46,8 +46,8 @@ func main() {
 	go ircListener(ircConn)
 
 	http.HandleFunc("/sendmsg", webHookHandler)
-	log.Println("Webhook listener running on :8080")
-	log.Fatal(http.ListenAndServe("127.0.0.1:8080", nil))
+	log.Println("Webhook listener running on :21337")
+	log.Fatal(http.ListenAndServe("127.0.0.1:21337", nil))
 }
 
 func ircListener(conn net.Conn) {

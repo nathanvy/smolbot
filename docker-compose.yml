@@ -1,10 +1,9 @@
 services:
   smolbot:
+    network_mode: host
     build:
       context: .
       dockerfile: Dockerfile
     image: nathanvy/smolbot:latest
     container_name: smolbot
     restart: unless-stopped
-    ports:
-      - "21337:21337"
