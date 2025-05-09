@@ -8,5 +8,3 @@ services:
     restart: unless-stopped
     ports:
       - "21337:21337"
-    env_file:
-      - .env
