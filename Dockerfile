@@ -1,5 +1,5 @@
 # --- Builder stage --------------------------------------------------------
-FROM golang:1.21-alpine AS builder
+FROM golang:1.24-alpine AS builder
 
 RUN addgroup -S app && adduser -S -G app app
 
