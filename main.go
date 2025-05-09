@@ -14,12 +14,12 @@ import (
 )
 
 const (
-	server   = "irc.squishynet.net:6697"
+	server   = "irc.example.net:6697"
 	channel  = "#bots"
 	nick     = "smolbot"
 	user     = "smolbot"
 	realname = "Just a smol bean"
-	password = "hippo"
+	password = ""
 )
 
 var ircConn net.Conn
